@@ -43,6 +43,7 @@ public class TelaLogin extends javax.swing.JFrame {
         setMaximumSize(null);
         setMinimumSize(null);
         setName("Login"); // NOI18N
+        setPreferredSize(null);
         setResizable(false);
 
         jLabel1.setText("Usuário:");
