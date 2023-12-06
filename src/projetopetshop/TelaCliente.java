@@ -14,6 +14,7 @@ public class TelaCliente extends javax.swing.JFrame {
     /**
      * Creates new form TelaCadastroAluno
      */
+    
     public TelaCliente() {
         initComponents();
     }
@@ -54,6 +55,11 @@ public class TelaCliente extends javax.swing.JFrame {
         setMinimumSize(null);
         setPreferredSize(null);
         setResizable(false);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+        });
 
         jLabel1.setText("Nome");
 
@@ -99,6 +105,11 @@ public class TelaCliente extends javax.swing.JFrame {
         jLabel9.setText("Nome Do Pet");
 
         btCancelar.setText("Cancelar");
+        btCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCancelarActionPerformed(evt);
+            }
+        });
 
         btConfirmar.setText("Confirmar");
 
@@ -221,6 +232,18 @@ public class TelaCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
 
+    private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCancelarActionPerformed
+        TelaPrincipal telaPrincipal = new TelaPrincipal();
+        telaPrincipal.setVisible(true);
+        this.dispose();        
+    }//GEN-LAST:event_btCancelarActionPerformed
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        TelaPrincipal telaPrincipal = new TelaPrincipal();
+        telaPrincipal.setVisible(true);
+        this.dispose(); 
+    }//GEN-LAST:event_formWindowClosed
+
     /**
      * @param args the command line arguments
      */
@@ -250,10 +273,8 @@ public class TelaCliente extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaCliente().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new TelaCliente().setVisible(true);
         });
     }
 
