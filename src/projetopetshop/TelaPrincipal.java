@@ -16,6 +16,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     public TelaPrincipal() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -36,6 +37,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Tela Principal");
         setMaximumSize(new java.awt.Dimension(960, 540));
         setMinimumSize(new java.awt.Dimension(640, 360));
         setResizable(false);
@@ -121,19 +123,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
+        TelaServicos telaServicos = new TelaServicos(this);
+        telaServicos.setVisible(true);
+        this.setEnabled(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        TelaPet telaPet = new TelaPet();
+        TelaPet telaPet = new TelaPet(this);
         telaPet.setVisible(true);
-        this.dispose();
+        this.setEnabled(false);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        TelaCliente telaCliente = new TelaCliente();
+        TelaCliente telaCliente = new TelaCliente(this);
         telaCliente.setVisible(true);
-        this.dispose();
+        this.setEnabled(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

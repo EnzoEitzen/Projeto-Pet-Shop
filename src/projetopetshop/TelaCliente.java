@@ -14,11 +14,17 @@ public class TelaCliente extends javax.swing.JFrame {
     /**
      * Creates new form TelaCadastroAluno
      */
+    TelaPrincipal principal;
     
     public TelaCliente() {
         initComponents();
     }
 
+    public TelaCliente(TelaPrincipal principal) {
+        initComponents();
+        this.principal = principal; 
+        this.setLocationRelativeTo(null);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -51,6 +57,7 @@ public class TelaCliente extends javax.swing.JFrame {
         btConfirmar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Serviços Cliente");
         setMaximumSize(null);
         setMinimumSize(null);
         setPreferredSize(null);
@@ -233,15 +240,15 @@ public class TelaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCancelarActionPerformed
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
-        telaPrincipal.setVisible(true);
-        this.dispose();        
+        principal.setEnabled(true);
+        principal.setVisible(true);   
+        this.dispose();
     }//GEN-LAST:event_btCancelarActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
-        telaPrincipal.setVisible(true);
-        this.dispose(); 
+        principal.setEnabled(true);
+        principal.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_formWindowClosed
 
     /**

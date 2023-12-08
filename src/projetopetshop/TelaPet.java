@@ -17,8 +17,17 @@ public class TelaPet extends javax.swing.JFrame {
     /**
      * Creates new form TelaCadastroAluno
      */
+    
+    TelaPrincipal principal;
+    
     public TelaPet() {
         initComponents();
+    }
+    
+    public TelaPet(TelaPrincipal principal) {
+        initComponents();
+        this.principal = principal; 
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -46,7 +55,7 @@ public class TelaPet extends javax.swing.JFrame {
         btCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Ser");
+        setTitle("Serviços Pet");
         setMaximumSize(null);
         setMinimumSize(null);
         setPreferredSize(null);
@@ -141,7 +150,7 @@ public class TelaPet extends javax.swing.JFrame {
                             .addComponent(jRadioButton2)
                             .addComponent(jRadioButton1)
                             .addComponent(jLabel8))))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextField1, jTextField5, jTextField6});
@@ -196,15 +205,15 @@ public class TelaPet extends javax.swing.JFrame {
     }//GEN-LAST:event_jFormattedTextField1ActionPerformed
 
     private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCancelarActionPerformed
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
-        telaPrincipal.setVisible(true);
+        principal.setEnabled(true);
+        principal.setVisible(true);     
         this.dispose();
     }//GEN-LAST:event_btCancelarActionPerformed
 
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
-        TelaPrincipal telaPrincipal = new TelaPrincipal();
-        telaPrincipal.setVisible(true);
-        this.dispose(); 
+        principal.setEnabled(true);
+        principal.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_formWindowClosed
 
     /**
