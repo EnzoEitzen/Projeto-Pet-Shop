@@ -34,20 +34,23 @@ public class TelaServicos extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
         jLabel1 = new javax.swing.JLabel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
         btConfirmar = new javax.swing.JButton();
         btCancelar = new javax.swing.JButton();
         preco = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        TosarCheck = new javax.swing.JCheckBox();
+        DeliveryCheck = new javax.swing.JCheckBox();
+        TreinarCheck = new javax.swing.JCheckBox();
+        BanhoCheck = new javax.swing.JCheckBox();
+        VacinacaoCheck = new javax.swing.JCheckBox();
+        ExameCheck = new javax.swing.JCheckBox();
+        preco1 = new javax.swing.JLabel();
+
+        jScrollPane1.setViewportView(jTextPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Serviços");
@@ -62,48 +65,6 @@ public class TelaServicos extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Serviços:");
-
-        buttonGroup1.add(jCheckBox1);
-        jCheckBox1.setText("Banho");
-
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroup1, org.jdesktop.beansbinding.ObjectProperty.create(), jCheckBox1, org.jdesktop.beansbinding.BeanProperty.create("selected"));
-        bindingGroup.addBinding(binding);
-
-        buttonGroup1.add(jCheckBox2);
-        jCheckBox2.setText("Consulta");
-
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroup1, org.jdesktop.beansbinding.ObjectProperty.create(), jCheckBox2, org.jdesktop.beansbinding.BeanProperty.create("selected"));
-        bindingGroup.addBinding(binding);
-
-        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox2ActionPerformed(evt);
-            }
-        });
-
-        buttonGroup1.add(jCheckBox3);
-        jCheckBox3.setText("Delivery");
-
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroup1, org.jdesktop.beansbinding.ObjectProperty.create(), jCheckBox3, org.jdesktop.beansbinding.BeanProperty.create("selected"));
-        bindingGroup.addBinding(binding);
-
-        buttonGroup1.add(jCheckBox4);
-        jCheckBox4.setText("Tosar");
-
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroup1, org.jdesktop.beansbinding.ObjectProperty.create(), jCheckBox4, org.jdesktop.beansbinding.BeanProperty.create("selected"));
-        bindingGroup.addBinding(binding);
-
-        buttonGroup1.add(jCheckBox5);
-        jCheckBox5.setText("Treinar");
-
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroup1, org.jdesktop.beansbinding.ObjectProperty.create(), jCheckBox5, org.jdesktop.beansbinding.BeanProperty.create("selected"));
-        bindingGroup.addBinding(binding);
-
-        buttonGroup1.add(jCheckBox6);
-        jCheckBox6.setText("Vacinação");
-
-        binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, buttonGroup1, org.jdesktop.beansbinding.ObjectProperty.create(), jCheckBox6, org.jdesktop.beansbinding.BeanProperty.create("selected"));
-        bindingGroup.addBinding(binding);
 
         btConfirmar.setText("Confirmar");
 
@@ -120,70 +81,117 @@ public class TelaServicos extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Preço:");
 
+        TosarCheck.setText("Tosar");
+        TosarCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TosarCheckActionPerformed(evt);
+            }
+        });
+
+        DeliveryCheck.setText("Delivery");
+        DeliveryCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeliveryCheckActionPerformed(evt);
+            }
+        });
+
+        TreinarCheck.setText("Treinar");
+        TreinarCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TreinarCheckActionPerformed(evt);
+            }
+        });
+
+        BanhoCheck.setText("Banho");
+        BanhoCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BanhoCheckActionPerformed(evt);
+            }
+        });
+
+        VacinacaoCheck.setText("Vacinação");
+        VacinacaoCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                VacinacaoCheckActionPerformed(evt);
+            }
+        });
+
+        ExameCheck.setText("Exame");
+        ExameCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ExameCheckActionPerformed(evt);
+            }
+        });
+
+        preco1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        preco1.setText("R$");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(119, 119, 119)
-                        .addComponent(btConfirmar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(100, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(10, 10, 10)
+                            .addComponent(jLabel1))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(119, 119, 119)
+                            .addComponent(btConfirmar)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(btCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox3)
-                            .addComponent(jCheckBox1)
-                            .addComponent(jCheckBox2))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBox4)
-                            .addComponent(jCheckBox5)
-                            .addComponent(jCheckBox6)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(preco, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)))
-                .addGap(110, 110, 110))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(TosarCheck)
+                                    .addComponent(DeliveryCheck)
+                                    .addComponent(TreinarCheck))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(BanhoCheck)
+                                    .addComponent(VacinacaoCheck)
+                                    .addComponent(ExameCheck)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(preco, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(1, 1, 1)
+                                .addComponent(preco1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(9, 9, 9)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(TosarCheck)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(DeliveryCheck)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TreinarCheck))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(BanhoCheck)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(VacinacaoCheck)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ExameCheck)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(preco, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(preco, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(preco1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
                     .addComponent(btCancelar)
                     .addComponent(btConfirmar))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
-
-        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -194,15 +202,66 @@ public class TelaServicos extends javax.swing.JFrame {
        this.dispose();
     }//GEN-LAST:event_formWindowClosed
 
-    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox2ActionPerformed
-
     private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCancelarActionPerformed
         principal.setEnabled(true);
         principal.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btCancelarActionPerformed
+
+    private void TosarCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TosarCheckActionPerformed
+        int precoAtual = Integer.parseInt(preco.getText());
+        if (TosarCheck.isSelected()) {
+            preco.setText(String.valueOf(precoAtual + 35));
+        } else  if (TosarCheck.isSelected() == false){
+            preco.setText(String.valueOf(precoAtual - 35));
+        }
+    }//GEN-LAST:event_TosarCheckActionPerformed
+
+    private void BanhoCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BanhoCheckActionPerformed
+        int precoAtual = Integer.parseInt(preco.getText());
+        if (BanhoCheck.isSelected()) {
+            preco.setText(String.valueOf(precoAtual + 30));
+        } else if (BanhoCheck.isSelected() == false){
+            preco.setText(String.valueOf(precoAtual - 30));
+        }
+    }//GEN-LAST:event_BanhoCheckActionPerformed
+
+    private void DeliveryCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeliveryCheckActionPerformed
+        int precoAtual = Integer.parseInt(preco.getText());
+        if (DeliveryCheck.isSelected()) {
+            preco.setText(String.valueOf(precoAtual + 25));
+        } else if (DeliveryCheck.isSelected() == false){
+            preco.setText(String.valueOf(precoAtual - 25));
+        }
+    }//GEN-LAST:event_DeliveryCheckActionPerformed
+
+    private void TreinarCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TreinarCheckActionPerformed
+        int precoAtual = Integer.parseInt(preco.getText());
+        if (TreinarCheck.isSelected()) {
+            preco.setText(String.valueOf(precoAtual + 125));
+        } else if (TreinarCheck.isSelected() == false){
+            preco.setText(String.valueOf(precoAtual - 125));
+        }
+    }//GEN-LAST:event_TreinarCheckActionPerformed
+
+    private void VacinacaoCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VacinacaoCheckActionPerformed
+        int precoAtual = Integer.parseInt(preco.getText());
+        if (VacinacaoCheck.isSelected()) {
+            preco.setText(String.valueOf(precoAtual + 75));
+        } else if (VacinacaoCheck.isSelected() == false){
+            preco.setText(String.valueOf(precoAtual - 75));
+        }
+    }//GEN-LAST:event_VacinacaoCheckActionPerformed
+
+    private void ExameCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExameCheckActionPerformed
+        int precoAtual = Integer.parseInt(preco.getText());
+        if (ExameCheck.isSelected()) {
+            preco.setText(String.valueOf(precoAtual + 50));
+        } else if (ExameCheck.isSelected() == false){
+            preco.setText(String.valueOf(precoAtual - 50));
+        }
+        
+    }//GEN-LAST:event_ExameCheckActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,28 +289,26 @@ public class TelaServicos extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TelaServicos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TelaServicos().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new TelaServicos().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox BanhoCheck;
+    private javax.swing.JCheckBox DeliveryCheck;
+    private javax.swing.JCheckBox ExameCheck;
+    private javax.swing.JCheckBox TosarCheck;
+    private javax.swing.JCheckBox TreinarCheck;
+    private javax.swing.JCheckBox VacinacaoCheck;
     private javax.swing.JButton btCancelar;
     private javax.swing.JButton btConfirmar;
-    private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel preco;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
+    private javax.swing.JLabel preco1;
     // End of variables declaration//GEN-END:variables
 }
